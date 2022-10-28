@@ -3,7 +3,7 @@
 set -x
 
 sudo apt-get update
-sudo apt-get install apt-transport-https ca certificates curl gnupg-agent software-properties-common tmux sudo apt gnupg2 pass
+sudo apt-get install -y apt-transport-https ca certificates curl gnupg-agent software-properties-common tmux sudo apt gnupg2 pass
 
 curl -fsSL https://download.docker.com/linux/ubuntu.gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
@@ -26,6 +26,3 @@ echo \
   sudo cp /local/repository/docker_config/daemon.json etc/docker/daemon.json
   sudo systemctl daemon-reload
   sudo systemctl restart docker
-  
-  
-  
